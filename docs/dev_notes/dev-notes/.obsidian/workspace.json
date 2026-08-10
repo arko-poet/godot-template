@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Godot Template.md",
+                "file": "Project Goals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Godot Template"
+              "title": "Project Goals"
             }
           }
         ]
@@ -206,6 +206,7 @@
   },
   "active": "26432a14e21ebff3",
   "lastOpenFiles": [
-    "Godot Template.md"
+    "Godot Template.md",
+    "Project Goals.md"
   ]
 }
