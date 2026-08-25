@@ -20,14 +20,19 @@ config/icon="res://art/icons/icon.svg"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
-"res://art/": "red",
-"res://audio/": "orange",
-"res://resources/": "yellow",
-"res://scenes/": "green",
-"res://scripts/": "teal"
+"res://addons/": "red",
+"res://art/": "orange",
+"res://audio/": "yellow",
+"res://resources/": "green",
+"res://scenes/": "teal",
+"res://scripts/": "blue"
 }
 
 [physics]
