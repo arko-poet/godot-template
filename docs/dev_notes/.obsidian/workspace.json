@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "25/08/2026.md",
+                "file": "dev-notes/Project Goals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026"
+              "title": "Project Goals"
             }
           }
         ],
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "25/08/2026.md",
+                "file": "dev-notes/Project Goals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "25/08/2026.md",
+                "file": "dev-notes/Project Goals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -176,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "25/08/2026.md",
+                "file": "dev-notes/Project Goals.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -205,10 +205,10 @@
   },
   "active": "aeb24efb71e43c55",
   "lastOpenFiles": [
+    "dev-notes/Godot Template.md",
+    "dev-notes/Project Goals.md",
     "25/08/2026.md",
     "25/08",
-    "25",
-    "dev-notes/Godot Template.md",
-    "dev-notes/Project Goals.md"
+    "25"
   ]
 }

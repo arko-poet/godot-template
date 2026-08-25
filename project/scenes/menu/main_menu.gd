@@ -1,11 +1,13 @@
 extends Node
 
+@onready var title_label: Label = %TitleLabel
+@onready var version_label: Label = %VersionLabel
 
-# Called when the node enters the scene tree for the first time.
+@onready var start_game_button: Button = %StartGameButton
+@onready var options_button: Button = %OptionsButton
+@onready var credits_button: Button = %CreditsButton
+
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	title_label.text = ProjectSettings.get_setting("application/config/name")
+	version_label.text = ProjectSettings.get_setting("application/config/version")

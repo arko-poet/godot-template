@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="godot-template"
+config/version="0.0.0"
 run/main_scene="uid://dsdmcnxnoe7br"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://art/icons/icon.svg"
@@ -32,7 +33,8 @@ folder_colors={
 "res://audio/": "yellow",
 "res://resources/": "green",
 "res://scenes/": "teal",
-"res://scripts/": "blue"
+"res://scripts/": "blue",
+"res://shaders/": "purple"
 }
 
 [physics]
