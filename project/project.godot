@@ -11,13 +11,24 @@ config_version=5
 [application]
 
 config/name="godot-template"
+run/main_scene="uid://dsdmcnxnoe7br"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://art/icons/icon.svg"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://art/": "red",
+"res://audio/": "orange",
+"res://resources/": "yellow",
+"res://scenes/": "green",
+"res://scripts/": "teal"
+}
 
 [physics]
 
