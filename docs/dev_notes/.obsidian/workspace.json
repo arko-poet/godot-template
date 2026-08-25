@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dev-notes/Project Goals.md",
+                "file": "dev-notes/Godot Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Goals"
+              "title": "Godot Template"
+            }
+          },
+          {
+            "id": "350d0e5e7c36e22f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dev-notes/25-08-2026.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "25-08-2026"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -114,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dev-notes/Project Goals.md",
+                "file": "dev-notes/25-08-2026.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dev-notes/Project Goals.md",
+                "file": "dev-notes/25-08-2026.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -176,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dev-notes/Project Goals.md",
+                "file": "dev-notes/25-08-2026.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -203,11 +217,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "aeb24efb71e43c55",
+  "active": "350d0e5e7c36e22f",
   "lastOpenFiles": [
     "dev-notes/Godot Template.md",
-    "dev-notes/Project Goals.md",
+    "dev-notes/25-08-2026.md",
     "25/08/2026.md",
+    "dev-notes/Project Goals.md",
     "25/08",
     "25"
   ]
