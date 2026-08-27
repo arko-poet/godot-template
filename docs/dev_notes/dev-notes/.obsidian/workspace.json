@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project Goals.md",
+                "file": "27-08-2026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Goals"
+              "title": "27-08-2026"
             }
           }
         ],
@@ -238,7 +238,7 @@
     "Godot Template.md",
     "27-08-2026.md",
     "25-08-2026.md",
-    "Untitled 1.md",
-    "Project Goals.md"
+    "Project Goals.md",
+    "Untitled 1.md"
   ]
 }
