@@ -10,3 +10,7 @@ func _on_tab_bar_tab_changed(tab: int) -> void:
 			tab_panel.show()
 		else:
 			tab_panel.hide()
+
+
+func _on_accept_options_button_pressed() -> void:
+	queue_free()

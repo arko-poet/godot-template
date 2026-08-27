@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://yt0chm4uh8tb"]
 
-[ext_resource type="Script" uid="uid://ciewu4hydd8l4" path="res://scenes/menu/options.gd" id="1_kixs7"]
+[ext_resource type="Script" uid="uid://ciewu4hydd8l4" path="res://scenes/menus/options_menu.gd" id="1_bp0ux"]
 
-[node name="Options" type="Node" unique_id=981769741]
-script = ExtResource("1_kixs7")
+[node name="OptionsMenu" type="CanvasLayer" unique_id=1244393214]
+script = ExtResource("1_bp0ux")
 
 [node name="UI" type="Control" parent="." unique_id=1513808327]
 layout_mode = 3
@@ -12,6 +12,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="ColorRect" parent="UI" unique_id=628735275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 
 [node name="TabBar" type="TabBar" parent="UI" unique_id=761128450]
 layout_mode = 1
@@ -92,4 +101,19 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
+[node name="AcceptOptionsButton" type="Button" parent="UI" unique_id=1342015817]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "OK"
+
 [connection signal="tab_changed" from="UI/TabBar" to="." method="_on_tab_bar_tab_changed"]
+[connection signal="pressed" from="UI/AcceptOptionsButton" to="." method="_on_accept_options_button_pressed"]

@@ -1,5 +1,7 @@
 extends Node
 
+@export var options_menu_scene: PackedScene
+
 @onready var title_label: Label = %TitleLabel
 @onready var version_label: Label = %VersionLabel
 
@@ -11,3 +13,8 @@ extends Node
 func _ready() -> void:
 	title_label.text = ProjectSettings.get_setting("application/config/name")
 	version_label.text = ProjectSettings.get_setting("application/config/version")
+
+
+func _on_options_button_pressed() -> void:
+	var options_menu := options_menu_scene.instantiate()
+	add_child(options_menu)
