@@ -31,10 +31,11 @@ folder_colors={
 "res://addons/": "red",
 "res://art/": "orange",
 "res://audio/": "yellow",
-"res://resources/": "green",
-"res://scenes/": "teal",
-"res://scripts/": "blue",
-"res://shaders/": "purple"
+"res://other_assets/": "green",
+"res://resources/": "teal",
+"res://scenes/": "blue",
+"res://scripts/": "purple",
+"res://shaders/": "pink"
 }
 
 [physics]

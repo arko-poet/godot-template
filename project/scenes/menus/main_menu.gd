@@ -1,5 +1,6 @@
 extends Node
 
+@export var game_scene: PackedScene
 @export var options_menu_scene: PackedScene
 @export var credits_scene: PackedScene
 
@@ -24,3 +25,9 @@ func _on_options_button_pressed() -> void:
 func _on_credits_button_pressed() -> void:
 	var credits := credits_scene.instantiate()
 	add_child(credits)
+
+
+func _on_start_game_button_pressed() -> void:
+	var game := game_scene.instantiate()
+	get_tree().root.add_child(game)
+	queue_free()

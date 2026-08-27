@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "27-08-2026.md",
+                "file": "Project Goals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "27-08-2026"
+              "title": "Project Goals"
             }
           }
         ],
@@ -235,9 +235,9 @@
   },
   "active": "2f7ba624baa40863",
   "lastOpenFiles": [
-    "25-08-2026.md",
-    "27-08-2026.md",
     "Godot Template.md",
+    "27-08-2026.md",
+    "25-08-2026.md",
     "Untitled 1.md",
     "Project Goals.md"
   ]
