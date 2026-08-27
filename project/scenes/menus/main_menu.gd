@@ -1,6 +1,7 @@
 extends Node
 
 @export var options_menu_scene: PackedScene
+@export var credits_scene: PackedScene
 
 @onready var title_label: Label = %TitleLabel
 @onready var version_label: Label = %VersionLabel
@@ -18,3 +19,8 @@ func _ready() -> void:
 func _on_options_button_pressed() -> void:
 	var options_menu := options_menu_scene.instantiate()
 	add_child(options_menu)
+
+
+func _on_credits_button_pressed() -> void:
+	var credits := credits_scene.instantiate()
+	add_child(credits)

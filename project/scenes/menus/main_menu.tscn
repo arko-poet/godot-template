@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dsdmcnxnoe7br"]
 
-[ext_resource type="Script" uid="uid://dckrafdur0rqe" path="res://scenes/menus/main_menu.gd" id="1_nl8w3"]
-[ext_resource type="PackedScene" uid="uid://yt0chm4uh8tb" path="res://scenes/menus/options_menu.tscn" id="2_3rkf3"]
+[ext_resource type="Script" uid="uid://dckrafdur0rqe" path="res://scenes/menus/main_menu.gd" id="1_ovrgc"]
+[ext_resource type="PackedScene" uid="uid://yt0chm4uh8tb" path="res://scenes/menus/options_menu.tscn" id="2_2o76q"]
+[ext_resource type="PackedScene" uid="uid://u4wnoweg0bmu" path="res://scenes/menus/credits.tscn" id="3_2o76q"]
 
 [node name="MainMenu" type="Node" unique_id=939735052]
-script = ExtResource("1_nl8w3")
-options_menu_scene = ExtResource("2_3rkf3")
+script = ExtResource("1_ovrgc")
+options_menu_scene = ExtResource("2_2o76q")
+credits_scene = ExtResource("3_2o76q")
 
 [node name="UI" type="Control" parent="." unique_id=459206347]
 layout_mode = 3
@@ -68,3 +70,4 @@ grow_vertical = 0
 text = "0.0.0"
 
 [connection signal="pressed" from="UI/MenuButtons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="UI/MenuButtons/CreditsButton" to="." method="_on_credits_button_pressed"]
