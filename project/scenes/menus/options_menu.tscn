@@ -116,4 +116,5 @@ grow_vertical = 0
 text = "OK"
 
 [connection signal="tab_changed" from="UI/TabBar" to="." method="_on_tab_bar_tab_changed"]
+[connection signal="toggled" from="UI/VideoSettings/FullScreenButton" to="." method="_on_full_screen_button_toggled"]
 [connection signal="pressed" from="UI/AcceptOptionsButton" to="." method="_on_accept_options_button_pressed"]
