@@ -16,6 +16,10 @@ run/main_scene="uid://dsdmcnxnoe7br"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://art/icons/icon.svg"
 
+[autoload]
+
+Settings="*uid://ds7oicts8ev4p"
+
 [display]
 
 window/stretch/mode="canvas_items"

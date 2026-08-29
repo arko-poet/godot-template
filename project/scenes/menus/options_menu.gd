@@ -1,6 +1,15 @@
 extends Node
 
 @onready var tab_panels := [%VideoSettings, %AudioSettings, %GameSettings]
+@onready var full_screen_button: CheckButton = %FullScreenButton
+
+
+func _ready() -> void:
+	var fullscreen_on: bool = Settings.get_setting("video", "fullscreen")
+	if fullscreen_on == null:
+		return
+		
+	full_screen_button.button_pressed = fullscreen_on
 
 
 func _on_tab_bar_tab_changed(tab: int) -> void:
@@ -17,7 +26,4 @@ func _on_accept_options_button_pressed() -> void:
 
 
 func _on_full_screen_button_toggled(toggled_on: bool) -> void:
-	if toggled_on:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	Settings.toggle_fullscreen(toggled_on)
