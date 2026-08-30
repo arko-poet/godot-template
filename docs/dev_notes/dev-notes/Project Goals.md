@@ -38,6 +38,6 @@ Features of the template:
 - [ ] support for saving the game
 - [ ] language/localization selector
 - [ ] loading screens for async scene loading
-- [ ] sfx/music, icon placeholders
+- [ ] sfx/music/icon placeholders
 - [ ] guidance and setup for optimising for the web
 - [ ] loading screen bar when game starts
