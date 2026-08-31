@@ -27,7 +27,11 @@ func toggle_fullscreen(toggled_on: bool) -> void:
 	_save_setting("video", "fullscreen", toggled_on)
 
 
-
+func toggle_mute(enable: bool) -> void:
+	var bus_index := AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(bus_index, enable)
+	
+	_save_setting("audio", "mute", enable)
 
 
 func _initialise_from_config() -> void:
@@ -36,7 +40,7 @@ func _initialise_from_config() -> void:
 		return
 	
 	toggle_fullscreen(config.get_value("video", "fullscreen"))
-	
+	toggle_mute(config.get_value("audio", "mute"))
 
 
 func _save_setting(section: String, key: String, value: Variant) -> void:
