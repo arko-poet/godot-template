@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @export var options_menu_scene: PackedScene
-@export var main_menu_scene: PackedScene
 
 
 func _ready() -> void:
@@ -29,7 +28,7 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_main_menu_button_pressed() -> void:
-	pass # Replace with function body.
+	pass # TODO implement scene loader
 
 
 func _on_exit_button_pressed() -> void:
