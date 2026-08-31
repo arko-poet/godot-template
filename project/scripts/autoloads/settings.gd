@@ -32,6 +32,16 @@ func toggle_mute(enable: bool) -> void:
 	_save_setting("audio", "mute", enable)
 
 
+func update_bus_volume(bus_name: StringName, volume: float) -> void:
+	assert(volume >= 0.0 and volume <= 1.0, "Volume values need to fall in range [0.0, 1.0].")
+	
+	var bus_index = AudioServer.get_bus_index(bus_name)
+	var volume_db = linear_to_db(volume)
+	AudioServer.set_bus_volume_db(bus_index, volume_db)
+	
+	_save_setting("audio", bus_name, volume)
+
+
 func _initialise_from_config() -> void:
 	var config := ConfigFile.new()
 	if not config.load(SETTINGS_PATH) == OK:
@@ -39,6 +49,10 @@ func _initialise_from_config() -> void:
 
 	toggle_fullscreen(config.get_value("video", "fullscreen"))
 	toggle_mute(config.get_value("audio", "mute"))
+	
+	for bus_index in AudioServer.bus_count:
+		var bus_name := AudioServer.get_bus_name(bus_index)
+		update_bus_volume(bus_name, config.get_value("audio", bus_name))
 
 
 func _save_setting(section: String, key: String, value: Variant) -> void:

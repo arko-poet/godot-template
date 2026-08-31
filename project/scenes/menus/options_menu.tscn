@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yt0chm4uh8tb"]
 
-[ext_resource type="Script" uid="uid://ciewu4hydd8l4" path="res://scenes/menus/options_menu.gd" id="1_bp0ux"]
+[ext_resource type="Script" uid="uid://ciewu4hydd8l4" path="res://scripts/menus/options_menu.gd" id="1_bp0ux"]
 
 [node name="OptionsMenu" type="CanvasLayer" unique_id=1244393214]
 script = ExtResource("1_bp0ux")
@@ -76,9 +76,39 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
+[node name="MasterLabel" type="Label" parent="UI/AudioSettings" unique_id=113138925]
+layout_mode = 2
+text = "Master:"
+
+[node name="MasterSlider" type="HSlider" parent="UI/AudioSettings" unique_id=6939851]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="MusicLabel" type="Label" parent="UI/AudioSettings" unique_id=51838781]
+layout_mode = 2
+text = "Music:"
+
+[node name="MusicSlider" type="HSlider" parent="UI/AudioSettings" unique_id=150997820]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="SFXLabel" type="Label" parent="UI/AudioSettings" unique_id=957045910]
+layout_mode = 2
+text = "SFX:"
+
+[node name="SFXSlider" type="HSlider" parent="UI/AudioSettings" unique_id=679135783]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
 [node name="MuteLabel" type="Label" parent="UI/AudioSettings" unique_id=1209602024]
 layout_mode = 2
-text = "Mute"
+text = "Mute:"
 
 [node name="MuteButton" type="CheckButton" parent="UI/AudioSettings" unique_id=1714952435]
 unique_name_in_owner = true
@@ -117,5 +147,8 @@ text = "OK"
 
 [connection signal="tab_changed" from="UI/TabBar" to="." method="_on_tab_bar_tab_changed"]
 [connection signal="toggled" from="UI/VideoSettings/FullScreenButton" to="." method="_on_full_screen_button_toggled"]
+[connection signal="value_changed" from="UI/AudioSettings/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="UI/AudioSettings/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="UI/AudioSettings/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="toggled" from="UI/AudioSettings/MuteButton" to="." method="_on_mute_button_toggled"]
 [connection signal="pressed" from="UI/AcceptOptionsButton" to="." method="_on_accept_options_button_pressed"]
