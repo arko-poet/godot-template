@@ -2,12 +2,12 @@ The purpose of this project is to develop a project template that can be used to
 
 Features of the template:
 - [ ] project settings setup with instructions on how to change them depending of type of game to make
-- [ ] automatic web deployments to the web
+- [x] automatic web deployments to the web
 - [ ] Controller for music
 - [ ] Controller for sound effects
 - [ ] Controller for scene transitions, starting new game, winning and loosing
 - [ ] main menu
-	- [ ] start game
+	- [x] start game
 	- [ ] options
 		- [ ] enable/disable different option tabs
 		- [ ] key binds tab
@@ -16,28 +16,28 @@ Features of the template:
 			- [ ] mute toggle
 			- [ ] audio buses with an option for adding multiple sliders (default master, music, sfx and ambience)
 		- [ ] accessibility settings
-			- [ ]  text, ui scale and font size options
+			- [ ] text, ui scale and font size options
 			- [ ] colorblind modes?
 		- [ ] custom settings
 		- [ ] video options
-			- [ ] full screen toggle
+			- [x] full screen toggle
 			- [ ] vsync toggle
-	- [ ] credits panel
+	- [x] credits panel
 - [ ] Pause Menu
-- [ ] setup directory convention
+- [x] setup directory convention
 - [ ] create instruction of how to consume the template
-- [ ] persistent options
+- [x] persistent options
 - [ ] ability to navigate menus with other devices than mouse
 - [ ] a collection of useful addons
-	- [ ] gdscript formatter
+	- [x] gdscript formatter
 	- [ ] debug overlay
 	- [ ] dialogue system
 - [ ] pre configured export presets
-- [ ] version number label
-- [ ] game title in menu
+- [x] version number label
+- [x] game title in menu
 - [ ] support for saving the game
 - [ ] language/localization selector
 - [ ] loading screens for async scene loading
 - [ ] sfx/music/icon placeholders
 - [ ] guidance and setup for optimising for the web
-- [ ] loading screen bar when game starts
+- [x] loading screen bar when game starts

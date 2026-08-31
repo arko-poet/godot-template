@@ -5,7 +5,7 @@ extends Node
 
 
 func _ready() -> void:
-	var fullscreen_on: bool = Settings.get_setting("video", "fullscreen")
+	var fullscreen_on = Settings.get_setting("video", "fullscreen")
 	if fullscreen_on == null:
 		return
 		

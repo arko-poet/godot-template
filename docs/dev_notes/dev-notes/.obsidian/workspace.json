@@ -8,62 +8,37 @@
         "type": "tabs",
         "children": [
           {
-            "id": "26432a14e21ebff3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project Goals.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Project Goals"
-            }
-          },
-          {
-            "id": "e3c698c53a48b1e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Godot Template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Godot Template"
-            }
-          },
-          {
             "id": "2f7ba624baa40863",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project Goals.md",
+                "file": "31-08-2026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Goals"
+              "title": "31-08-2026"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "bb7cc460fdea8c3f",
         "type": "tabs",
         "children": [
           {
-            "id": "68f3af45189bc55d",
+            "id": "255679dcca5bc41e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Project Goals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Project Goals"
             }
           }
         ]
@@ -235,9 +210,10 @@
   },
   "active": "2f7ba624baa40863",
   "lastOpenFiles": [
+    "Project Goals.md",
+    "31-08-2026.md",
     "Godot Template.md",
     "27-08-2026.md",
-    "Project Goals.md",
     "25-08-2026.md",
     "Untitled 1.md"
   ]
