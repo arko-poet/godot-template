@@ -5,31 +5,24 @@ extends Node
 @onready var full_screen_button: CheckButton = %FullScreenButton
 
 @onready var master_slider: HSlider = %MasterSlider
-@onready var music_slider: HSlider = %MusicSlider
-@onready var sfx_slider: HSlider = %SFXSlider
+@onready var audio_bus_sliders := {
+	&"Master": %MasterSlider,
+	&"Music": %MusicSlider,
+	&"SFX": %SFXSlider,
+}
 @onready var mute_button: CheckButton = %MuteButton
 
 
 func _ready() -> void:
 	var fullscreen_on = Settings.get_setting("video", "fullscreen")
-	if fullscreen_on != null:
-		full_screen_button.button_pressed = fullscreen_on
+	full_screen_button.button_pressed = fullscreen_on
 
 	var mute_enabled = Settings.get_setting("audio", "mute")
-	if mute_enabled != null:
-		mute_button.button_pressed = mute_enabled
-		
-	var master_bus_volume = Settings.get_setting("audio", "Master")
-	if master_bus_volume != null:
-		master_slider.value = master_bus_volume
-	
-	var music_bus_volume = Settings.get_setting("audio", "Music")
-	if music_bus_volume != null:
-		music_slider.value = music_bus_volume
-		
-	var sfx_bus_volume = Settings.get_setting("audio", "SFX")
-	if sfx_bus_volume != null:
-		sfx_slider.value = sfx_bus_volume
+	mute_button.button_pressed = mute_enabled
+
+	for bus_name in audio_bus_sliders.keys():
+		var bus_volume = Settings.get_setting("audio", bus_name)
+		audio_bus_sliders.get(bus_name).value = bus_volume
 
 
 func _on_tab_bar_tab_changed(tab: int) -> void:

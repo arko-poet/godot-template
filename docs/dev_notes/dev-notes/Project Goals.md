@@ -21,9 +21,8 @@ Features of the template:
 		- [ ] custom settings
 		- [ ] video options
 			- [x] full screen toggle
-			- [ ] vsync toggle
 	- [x] credits panel
-- [ ] Pause Menu
+- [x] Pause Menu
 - [x] setup directory convention
 - [ ] create instruction of how to consume the template
 - [x] persistent options
