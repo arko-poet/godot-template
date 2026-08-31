@@ -28,7 +28,8 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_main_menu_button_pressed() -> void:
-	pass # TODO implement scene loader
+	toggle_pause()
+	SceneLoader.load_main_menu()
 
 
 func _on_exit_button_pressed() -> void:

@@ -19,6 +19,7 @@ config/icon="res://art/icons/icon.svg"
 [autoload]
 
 Settings="*uid://ds7oicts8ev4p"
+SceneLoader="*uid://dqjnmmwf8fpu1"
 
 [display]
 
