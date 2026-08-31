@@ -9,7 +9,7 @@ func _ready() -> void:
 	var fullscreen_on = Settings.get_setting("video", "fullscreen")
 	if fullscreen_on != null:
 		full_screen_button.button_pressed = fullscreen_on
-	
+
 	var mute_enabled = Settings.get_setting("audio", "mute")
 	if mute_enabled != null:
 		mute_button.button_pressed = mute_enabled
@@ -18,10 +18,7 @@ func _ready() -> void:
 func _on_tab_bar_tab_changed(tab: int) -> void:
 	for tab_index in tab_panels.size():
 		var tab_panel: Control = tab_panels[tab_index]
-		if tab_index == tab:
-			tab_panel.show()
-		else:
-			tab_panel.hide()
+		tab_panel.visible = tab_index == tab
 
 
 func _on_accept_options_button_pressed() -> void:

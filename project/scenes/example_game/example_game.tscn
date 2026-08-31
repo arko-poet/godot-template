@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crovuo8whtepl" path="res://scenes/example_game/example_game.gd" id="1_s4vru"]
 [ext_resource type="AudioStream" uid="uid://c4vbqo4n6m3k7" path="res://audio/music/template/Classicals.de - Chopin - Nocturne B. 49 in C-sharp minor 'Lento con gran espressione'.mp3" id="2_jrcqa"]
+[ext_resource type="PackedScene" uid="uid://brt4e2uh753mt" path="res://scenes/menus/pause_menu.tscn" id="3_wr22y"]
 
 [node name="ExampleGame" type="Node" unique_id=1441384683]
 script = ExtResource("1_s4vru")
@@ -10,6 +11,8 @@ script = ExtResource("1_s4vru")
 stream = ExtResource("2_jrcqa")
 autoplay = true
 bus = &"Music"
+
+[node name="PauseMenu" parent="." unique_id=2005489429 instance=ExtResource("3_wr22y")]
 
 [node name="UI" type="Control" parent="." unique_id=1529235199]
 layout_mode = 3
@@ -32,6 +35,12 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ElapsedTimeLabel" type="Label" parent="UI/CounterContainer" unique_id=565227061]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CounterLabel" type="Label" parent="UI/CounterContainer" unique_id=570449626]
 unique_name_in_owner = true
