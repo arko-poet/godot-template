@@ -13,6 +13,7 @@ extends Node
 
 
 func _ready() -> void:
+	print('main menu ready')
 	title_label.text = ProjectSettings.get_setting("application/config/name")
 	version_label.text = ProjectSettings.get_setting("application/config/version")
 

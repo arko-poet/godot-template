@@ -22,6 +22,7 @@ buses/default_bus_layout="res://resources/default_bus_layout.tres"
 
 [autoload]
 
+UiController="*uid://b0fggkygj08yj"
 Settings="*uid://ds7oicts8ev4p"
 SceneLoader="*uid://dqjnmmwf8fpu1"
 
