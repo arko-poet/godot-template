@@ -12,10 +12,10 @@ Features of the template:
 		- [ ] enable/disable different option tabs
 		- [ ] key binds tab
 		- [ ] restarting game
-		- [ ] audio options
+		- [x] audio options
 			- [x] mute toggle
 			- [x] audio buses
-			- [ ] option for adding multiple sliders (default master, music, sfx and ambience)
+			- [x] option for adding multiple sliders (default master, music, sfx and ambience)
 		- [ ] accessibility settings
 			- [ ] text, ui scale and font size options
 			- [ ] colorblind modes?

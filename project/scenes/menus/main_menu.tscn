@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dckrafdur0rqe" path="res://scripts/menus/main_menu.gd" id="1_ovrgc"]
 [ext_resource type="PackedScene" uid="uid://yt0chm4uh8tb" path="res://scenes/menus/options/options_menu.tscn" id="2_2o76q"]
-[ext_resource type="PackedScene" uid="uid://d1ujue4jtg46f" path="res://scenes/example_game/example_game.tscn" id="2_6bivr"]
 [ext_resource type="PackedScene" uid="uid://u4wnoweg0bmu" path="res://scenes/menus/credits.tscn" id="3_2o76q"]
 [ext_resource type="AudioStream" uid="uid://dnpgogajdiigx" path="res://audio/music/template/Classicals.de - Chopin - Ballade no. 1, Op. 23.mp3" id="5_imvie"]
 
 [node name="MainMenu" type="Node" unique_id=939735052]
 script = ExtResource("1_ovrgc")
-game_scene = ExtResource("2_6bivr")
+game_scene_path = "uid://d1ujue4jtg46f"
 options_menu_scene = ExtResource("2_2o76q")
 credits_scene = ExtResource("3_2o76q")
 

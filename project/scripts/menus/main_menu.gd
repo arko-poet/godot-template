@@ -1,6 +1,6 @@
 extends Node
 
-@export var game_scene: PackedScene
+@export_file("*.tscn") var game_scene_path: String
 @export var options_menu_scene: PackedScene
 @export var credits_scene: PackedScene
 
@@ -28,4 +28,4 @@ func _on_credits_button_pressed() -> void:
 
 
 func _on_start_game_button_pressed() -> void:
-	SceneLoader.load_packed_scene(game_scene)
+	SceneLoader.load_from_path(game_scene_path)
