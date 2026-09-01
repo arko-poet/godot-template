@@ -13,14 +13,16 @@ Features of the template:
 		- [ ] key binds tab
 		- [ ] restarting game
 		- [ ] audio options
-			- [ ] mute toggle
-			- [ ] audio buses with an option for adding multiple sliders (default master, music, sfx and ambience)
+			- [x] mute toggle
+			- [x] audio buses
+			- [ ] option for adding multiple sliders (default master, music, sfx and ambience)
 		- [ ] accessibility settings
 			- [ ] text, ui scale and font size options
 			- [ ] colorblind modes?
 		- [ ] custom settings
 		- [ ] video options
 			- [x] full screen toggle
+			- [ ] multiple resolutions
 	- [x] credits panel
 - [x] Pause Menu
 - [x] setup directory convention
