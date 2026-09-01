@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://yt0chm4uh8tb"]
 
-[ext_resource type="Script" uid="uid://ciewu4hydd8l4" path="res://scripts/menus/options_menu.gd" id="1_bp0ux"]
+[ext_resource type="Script" uid="uid://ciewu4hydd8l4" path="res://scripts/menus/options/options_menu.gd" id="1_5l26w"]
+[ext_resource type="PackedScene" uid="uid://d5o6i818sqqx" path="res://scenes/menus/options/audio_bus_slider.tscn" id="2_5l26w"]
 
 [node name="OptionsMenu" type="CanvasLayer" unique_id=1244393214]
-script = ExtResource("1_bp0ux")
+script = ExtResource("1_5l26w")
+audio_bus_slider_scene = ExtResource("2_5l26w")
 
 [node name="UI" type="Control" parent="." unique_id=1513808327]
 layout_mode = 3
@@ -59,7 +61,7 @@ text = "Full Screen"
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="AudioSettings" type="GridContainer" parent="UI" unique_id=1028650506]
+[node name="AudioSettings" type="GridContainer" parent="UI" unique_id=237654769]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -68,13 +70,40 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -53.5
+offset_top = -52.5
+offset_right = 53.5
+offset_bottom = 52.5
 grow_horizontal = 2
 grow_vertical = 2
 columns = 2
+
+[node name="MasterBusLabel" type="Label" parent="UI/AudioSettings" unique_id=1724129773]
+layout_mode = 2
+text = "Master:"
+
+[node name="MasterBusSlider" parent="UI/AudioSettings" unique_id=705527615 instance=ExtResource("2_5l26w")]
+layout_mode = 2
+size_flags_vertical = 4
+bus_name = &"Master"
+
+[node name="MusicBusLabel" type="Label" parent="UI/AudioSettings" unique_id=1985433003]
+layout_mode = 2
+text = "Music:"
+
+[node name="MusicBusSlider" parent="UI/AudioSettings" unique_id=793392659 instance=ExtResource("2_5l26w")]
+layout_mode = 2
+size_flags_vertical = 4
+bus_name = &"Music"
+
+[node name="SFXBusLabel" type="Label" parent="UI/AudioSettings" unique_id=1915030843]
+layout_mode = 2
+text = "SFX:"
+
+[node name="SFXBusSilder" parent="UI/AudioSettings" unique_id=2038078927 instance=ExtResource("2_5l26w")]
+layout_mode = 2
+size_flags_vertical = 4
+bus_name = &"SFX"
 
 [node name="MuteLabel" type="Label" parent="UI/AudioSettings" unique_id=1209602024]
 layout_mode = 2
@@ -83,6 +112,8 @@ text = "Mute:"
 [node name="MuteButton" type="CheckButton" parent="UI/AudioSettings" unique_id=1714952435]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="GameSettings" type="GridContainer" parent="UI" unique_id=1223380960]
 unique_name_in_owner = true
