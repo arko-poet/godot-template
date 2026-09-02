@@ -1,5 +1,7 @@
 extends Node
 
+signal closed
+
 @export var resolutions: Array[Vector2i]
 
 @onready var tab_panels := [%VideoSettings, %AudioSettings, %GameSettings]
@@ -10,6 +12,8 @@ extends Node
 
 @onready var mute_button: CheckButton = %MuteButton
 
+@onready var tab_bar: TabBar = %TabBar
+
 
 func _ready() -> void:
 	full_screen_button.button_pressed = Settings.fullscreen
@@ -18,6 +22,8 @@ func _ready() -> void:
 	for resolution in resolutions:
 		resolutions_button.add_item("%sx%s" % [resolution.x, resolution.y])
 	resolutions_button.select(resolutions.find(Settings.resolution))
+	
+	tab_bar.grab_focus()
 
 
 func _on_tab_bar_tab_changed(tab: int) -> void:
@@ -27,6 +33,7 @@ func _on_tab_bar_tab_changed(tab: int) -> void:
 
 
 func _on_accept_options_button_pressed() -> void:
+	closed.emit()
 	queue_free()
 
 

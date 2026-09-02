@@ -23,23 +23,22 @@ Features of the template:
 		- [ ] custom settings
 		- [ ] video options
 			- [x] full screen toggle
-			- [ ] multiple resolutions
+			- [x] multiple resolutions
 	- [x] credits panel
 - [x] Pause Menu
 - [x] setup directory convention
 - [ ] create instruction of how to consume the template
 - [x] persistent options
-- [ ] ability to navigate menus with other devices than mouse
-- [ ] a collection of useful addons
+- [x] ability to navigate menus with other devices than mouse
+- [x] a collection of useful addons
 	- [x] gdscript formatter
-	- [ ] debug overlay
-	- [ ] dialogue system
 - [ ] pre configured export presets
 - [x] version number label
 - [x] game title in menu
 - [ ] support for saving the game
 - [ ] language/localization selector
-- [ ] loading screens for async scene loading
-- [ ] sfx/music/icon placeholders
+- [x] loading screens for async scene loading
+- [x] sfx/music/icon placeholders
 - [ ] guidance and setup for optimising for the web
 - [x] loading screen bar when game starts
+- [ ] add theme

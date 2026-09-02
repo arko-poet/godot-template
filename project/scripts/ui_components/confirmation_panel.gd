@@ -15,6 +15,8 @@ func setup(prompt_text: String, cancel_text: String, accept_text: String) -> voi
 	_prompt_label.text = prompt_text
 	_cancel_button.text = cancel_text
 	_accept_button.text = accept_text
+	
+	_accept_button.grab_focus()
 
 
 func _on_cancel_button_pressed() -> void:

@@ -59,6 +59,7 @@ text = "[center]
 [/center]"
 
 [node name="ExitCreditsButton" type="Button" parent="UI" unique_id=249258513]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0

@@ -4,6 +4,8 @@ const ConfirmationPanelScene := preload("res://scenes/ui_components/confirmation
 
 @export var options_menu_scene: PackedScene
 
+@onready var options_button: Button = %OptionsButton
+
 
 func _ready() -> void:
 	toggle_pause()
@@ -18,6 +20,9 @@ func _input(event: InputEvent) -> void:
 func toggle_pause() -> void:
 	visible = not visible
 	get_tree().paused = visible
+	
+	if visible:
+		options_button.grab_focus()
 
 
 func _on_options_button_pressed() -> void:
