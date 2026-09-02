@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+const ConfirmationPanelScene := preload("res://scenes/ui_components/confirmation_panel.tscn")
+
 @export var options_menu_scene: PackedScene
 
 
@@ -28,9 +30,25 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_main_menu_button_pressed() -> void:
-	toggle_pause()
-	SceneLoader.load_main_menu()
+	var confirmation_panel: ConfirmationPanel = ConfirmationPanelScene.instantiate()
+	confirmation_panel.setup("Exit to Main Menu?", "No", "Yes")
+	confirmation_panel.responded.connect(_on_main_menu_confirmed)
+	add_child(confirmation_panel)
+
+
+func _on_main_menu_confirmed(accepted: bool) -> void:
+	if accepted:
+		toggle_pause()
+		SceneLoader.load_main_menu()
 
 
 func _on_exit_button_pressed() -> void:
-	get_tree().quit()
+	var confirmation_panel: ConfirmationPanel = ConfirmationPanelScene.instantiate()
+	confirmation_panel.setup("Exit Game?", "No", "Yes")
+	confirmation_panel.responded.connect(_on_exit_confirmed)
+	add_child(confirmation_panel)
+
+
+func _on_exit_confirmed(accepted: bool) -> void:
+	if accepted:
+		get_tree().quit()
