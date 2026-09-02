@@ -1,9 +1,12 @@
 extends Node
 
+@export var resolutions: Array[Vector2i]
+
 @onready var tab_panels := [%VideoSettings, %AudioSettings, %GameSettings]
 @onready var audio_settings: GridContainer = %AudioSettings
 
 @onready var full_screen_button: CheckButton = %FullScreenButton
+@onready var resolutions_button: OptionButton = %ResolutionsButton
 
 @onready var mute_button: CheckButton = %MuteButton
 
@@ -11,6 +14,10 @@ extends Node
 func _ready() -> void:
 	full_screen_button.button_pressed = Settings.fullscreen
 	mute_button.button_pressed = Settings.mute_enabled
+
+	for resolution in resolutions:
+		resolutions_button.add_item("%sx%s" % [resolution.x, resolution.y])
+	resolutions_button.select(resolutions.find(Settings.resolution))
 
 
 func _on_tab_bar_tab_changed(tab: int) -> void:
@@ -31,5 +38,5 @@ func _on_mute_button_toggled(toggled_on: bool) -> void:
 	Settings.mute_enabled = toggled_on
 
 
-#func _on_bus_slider_value_changed(value: float, bus_name: StringName) -> void:
-	#Settings.set_bus_volume(bus_name, value)
+func _on_resolutions_button_item_selected(index: int) -> void:
+	Settings.resolution = resolutions[index]

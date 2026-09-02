@@ -5,13 +5,14 @@ Features of the template:
 - [x] automatic web deployments to the web
 - [ ] Controller for music
 - [ ] Controller for sound effects
-- [ ] Controller for scene transitions, starting new game, winning and loosing
+- [x] Controller for scene transitions, 
+- [ ] winning and loosing level/game
 - [ ] main menu
 	- [x] start game
 	- [ ] options
 		- [ ] enable/disable different option tabs
 		- [ ] key binds tab
-		- [ ] restarting game
+		- [ ] restarting game/level
 		- [x] audio options
 			- [x] mute toggle
 			- [x] audio buses

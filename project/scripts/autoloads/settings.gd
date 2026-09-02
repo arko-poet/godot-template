@@ -21,6 +21,12 @@ var fullscreen: bool:
 
 		_save_setting("video", "fullscreen", fullscreen)
 
+var resolution: Vector2i:
+	set(value):
+		resolution = value
+		DisplayServer.window_set_size(resolution)
+		_save_setting("video", "resolution", resolution)
+
 var mute_enabled: bool:
 	set(value):
 		mute_enabled = value
@@ -48,6 +54,8 @@ func _ready() -> void:
 			default_bus_volume = _DEFAULT_BUS_VOLUME
 		set_bus_volume(bus_name, config.get_value("audio", bus_name.to_lower(), default_bus_volume))
 
+	resolution = config.get_value("video", "resolution", get_default_resolution())
+
 
 func get_bus_volume(bus_name: StringName) -> float:
 	if not bus_name in _bus_volumes:
@@ -67,6 +75,13 @@ func set_bus_volume(bus_name: StringName, volume: float) -> void:
 
 	_bus_volumes[bus_name] = volume
 	_save_setting("audio", bus_name.to_lower(), volume)
+
+
+func get_default_resolution() -> Vector2i:
+	return Vector2i(
+		ProjectSettings.get_setting("display/window/size/viewport_width"),
+		ProjectSettings.get_setting("display/window/size/viewport_height"),
+	)
 
 
 func _save_setting(section: String, key: String, value: Variant) -> void:
