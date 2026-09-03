@@ -4,7 +4,7 @@ signal closed
 
 @export var resolutions: Array[Vector2i]
 
-@onready var tab_panels := [%VideoSettings, %AudioSettings, %GameSettings]
+@onready var tab_panels := [%VideoSettings, %AudioSettings, %GameSettings, %InputSettings]
 @onready var audio_settings: GridContainer = %AudioSettings
 
 @onready var full_screen_button: CheckButton = %FullScreenButton
