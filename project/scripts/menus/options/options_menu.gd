@@ -6,6 +6,7 @@ signal closed
 
 @onready var tab_panels := [%VideoSettings, %AudioSettings, %GameSettings, %InputSettings]
 @onready var audio_settings: GridContainer = %AudioSettings
+@onready var input_settings: GridContainer = %InputSettings
 
 @onready var full_screen_button: CheckButton = %FullScreenButton
 @onready var resolutions_button: OptionButton = %ResolutionsButton
@@ -22,7 +23,9 @@ func _ready() -> void:
 	for resolution in resolutions:
 		resolutions_button.add_item("%sx%s" % [resolution.x, resolution.y])
 	resolutions_button.select(resolutions.find(Settings.resolution))
-	
+
+	_populate_input_map()
+
 	tab_bar.grab_focus()
 
 
@@ -47,3 +50,18 @@ func _on_mute_button_toggled(toggled_on: bool) -> void:
 
 func _on_resolutions_button_item_selected(index: int) -> void:
 	Settings.resolution = resolutions[index]
+
+
+func _populate_input_map() -> void:
+	for action in InputMap.get_actions():
+		# ui_ corresponds to built in actions which by design are not used for remapping
+		if action.begins_with("ui_"):
+			continue
+
+		for event: InputEvent in InputMap.action_get_events(action):
+			var label := Label.new()
+			label.text = ("%s:" % action).capitalize()
+			var button := Button.new()
+			button.text = InputMap.get_action_description(action)
+			input_settings.add_child(label)
+			input_settings.add_child(button)

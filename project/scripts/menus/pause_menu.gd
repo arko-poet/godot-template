@@ -12,7 +12,7 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("ui_cancel") and event.is_pressed():
+	if (event.is_action("ui_cancel") or event.is_action("pause")) and event.is_pressed():
 		get_viewport().set_input_as_handled()
 		toggle_pause()
 

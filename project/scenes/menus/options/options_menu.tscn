@@ -144,6 +144,7 @@ columns = 2
 
 [node name="InputSettings" type="GridContainer" parent="UI" unique_id=1022807815]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -156,6 +157,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+columns = 2
 
 [node name="AcceptOptionsButton" type="Button" parent="UI" unique_id=1342015817]
 unique_name_in_owner = true
