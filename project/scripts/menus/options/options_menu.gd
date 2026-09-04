@@ -83,6 +83,5 @@ func _on_input_map_listener_key_selected(
 	action: StringName,
 	button: Button,
 ) -> void:
-	InputMap.action_erase_events(action)
-	InputMap.action_add_event(action, event)
+	Settings.remap_action_key(action, event)
 	button.text = InputMap.get_action_description(action)

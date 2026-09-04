@@ -56,6 +56,22 @@ func _ready() -> void:
 
 	resolution = config.get_value("video", "resolution", get_default_resolution())
 
+	for action in InputMap.get_actions():
+		# ui_ corresponds to built in actions which by design are not used for remapping
+		if action.begins_with("ui_"):
+			continue
+
+		var input_event: InputEventKey = InputEventKey.new()
+		var input_keycode := OS.find_keycode_from_string(
+			config.get_value("input", action, InputMap.action_get_events(action)[0].keycode)
+		)
+		input_event.keycode = (input_keycode & KEY_CODE_MASK) as Key
+		input_event.shift_pressed = input_keycode & KEY_MASK_SHIFT != 0
+		input_event.ctrl_pressed = input_keycode & KEY_MASK_CTRL != 0
+		input_event.alt_pressed = input_keycode & KEY_MASK_ALT != 0
+		input_event.meta_pressed = input_keycode & KEY_MASK_META != 0
+		remap_action_key(action, input_event)
+
 
 func get_bus_volume(bus_name: StringName) -> float:
 	if not bus_name in _bus_volumes:
@@ -82,6 +98,13 @@ func get_default_resolution() -> Vector2i:
 		ProjectSettings.get_setting("display/window/size/viewport_width"),
 		ProjectSettings.get_setting("display/window/size/viewport_height"),
 	)
+
+
+func remap_action_key(action: StringName, event: InputEventKey) -> void:
+	InputMap.action_erase_events(action)
+	InputMap.action_add_event(action, event)
+
+	_save_setting("input", action, event.as_text_keycode())
 
 
 func _save_setting(section: String, key: String, value: Variant) -> void:
