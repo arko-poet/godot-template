@@ -159,6 +159,16 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
+[node name="ActionColumnLabel" type="Label" parent="UI/InputSettings" unique_id=272849441]
+layout_mode = 2
+text = "Action"
+
+[node name="KeyColumnLabel" type="Label" parent="UI/InputSettings" unique_id=509906113]
+layout_mode = 2
+text = "Key"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="AcceptOptionsButton" type="Button" parent="UI" unique_id=1342015817]
 unique_name_in_owner = true
 layout_mode = 1

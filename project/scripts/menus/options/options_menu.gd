@@ -59,9 +59,11 @@ func _populate_input_map() -> void:
 			continue
 
 		for event: InputEvent in InputMap.action_get_events(action):
-			var label := Label.new()
-			label.text = ("%s:" % action).capitalize()
-			var button := Button.new()
-			button.text = InputMap.get_action_description(action)
-			input_settings.add_child(label)
-			input_settings.add_child(button)
+			if event is InputEventAction:
+				print(event.as_text())
+				var label := Label.new()
+				label.text = ("%s:" % action).capitalize()
+				var button := Button.new()
+				button.text = InputMap.get_action_description(action)
+				input_settings.add_child(label)
+				input_settings.add_child(button)
