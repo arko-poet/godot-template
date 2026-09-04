@@ -2,6 +2,8 @@ extends Node
 
 signal closed
 
+const InputMapListenerScene := preload("res://input_map_listener.tscn")
+
 @export var resolutions: Array[Vector2i]
 
 @onready var tab_panels := [%VideoSettings, %AudioSettings, %GameSettings, %InputSettings]
@@ -59,11 +61,28 @@ func _populate_input_map() -> void:
 			continue
 
 		for event: InputEvent in InputMap.action_get_events(action):
-			if event is InputEventAction:
-				print(event.as_text())
-				var label := Label.new()
-				label.text = ("%s:" % action).capitalize()
-				var button := Button.new()
-				button.text = InputMap.get_action_description(action)
-				input_settings.add_child(label)
-				input_settings.add_child(button)
+			var label := Label.new()
+			label.text = ("%s:" % action).capitalize()
+			var button := Button.new()
+			button.text = InputMap.get_action_description(action)
+			button.pressed.connect(_on_input_map_button_pressed.bind(action, button))
+			input_settings.add_child(label)
+			input_settings.add_child(button)
+
+
+func _on_input_map_button_pressed(action: StringName, button: Button) -> void:
+	var input_map_listener: InputMapListener = InputMapListenerScene.instantiate()
+	input_map_listener.key_selected.connect(
+		_on_input_map_listener_key_selected.bind(action, button)
+	)
+	add_child(input_map_listener)
+
+
+func _on_input_map_listener_key_selected(
+	event: InputEventKey,
+	action: StringName,
+	button: Button,
+) -> void:
+	InputMap.action_erase_events(action)
+	InputMap.action_add_event(action, event)
+	button.text = InputMap.get_action_description(action)

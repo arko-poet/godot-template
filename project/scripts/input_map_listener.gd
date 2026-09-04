@@ -1,4 +1,4 @@
-extends Node
+class_name InputMapListener extends Node
 
 signal key_selected(event: InputEventKey)
 
