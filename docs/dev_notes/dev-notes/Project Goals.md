@@ -10,9 +10,9 @@ Features of the template:
 - [ ] main menu
 	- [x] start game
 	- [ ] options
-		- [ ] enable/disable different option tabs
+		- [x] enable/disable different option tabs
 		- [x] key binds tab
-		- [ ] restarting game/level
+		- [x] restarting game/level
 		- [x] audio options
 			- [x] mute toggle
 			- [x] audio buses

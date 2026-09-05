@@ -10,6 +10,8 @@ func _enter_tree() -> void:
 
 func _on_node_entered_tree(node: Node) -> void:
 	if node is Button:
+		node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		
 		node.mouse_entered.connect(_on_mouse_entered)
 		node.pressed.connect(_on_node_pressed)
 
