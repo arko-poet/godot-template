@@ -11,9 +11,36 @@ func _enter_tree() -> void:
 func _on_node_entered_tree(node: Node) -> void:
 	if node is Button:
 		node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-		
 		node.mouse_entered.connect(_on_mouse_entered)
+		node.focus_entered.connect(_on_focus_entered)
 		node.pressed.connect(_on_node_pressed)
+
+	if node is Slider:
+		node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		node.mouse_entered.connect(_on_mouse_entered)
+		node.focus_entered.connect(_on_focus_entered)
+		node.drag_started.connect(_on_node_pressed)
+
+	if node is TabBar:
+		node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		node.tab_hovered.connect(_on_mouse_entered.unbind(1))
+		node.tab_changed.connect(_on_node_pressed.unbind(1))
+
+
+func _on_focus_entered() -> void:
+	if (
+		not (
+			Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_up")
+			or Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_down")
+		)
+	):
+		return
+	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.stream = ui_hover_sound
+	audio_stream_player.bus = &"SFX"
+	add_child(audio_stream_player)
+	audio_stream_player.play()
+	audio_stream_player.finished.connect(audio_stream_player.queue_free)
 
 
 func _on_mouse_entered() -> void:
