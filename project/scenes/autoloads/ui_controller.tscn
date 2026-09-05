@@ -6,5 +6,5 @@
 
 [node name="UiController" type="Node" unique_id=1506427996]
 script = ExtResource("1_ol88s")
-ui_hover_sound = ExtResource("2_2vy06")
-ui_pressed_sound = ExtResource("3_x4577")
+_ui_hover_sound = ExtResource("2_2vy06")
+_ui_pressed_sound = ExtResource("3_x4577")
