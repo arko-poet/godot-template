@@ -11,7 +11,7 @@ Features of the template:
 	- [x] start game
 	- [ ] options
 		- [ ] enable/disable different option tabs
-		- [ ] key binds tab
+		- [x] key binds tab
 		- [ ] restarting game/level
 		- [x] audio options
 			- [x] mute toggle

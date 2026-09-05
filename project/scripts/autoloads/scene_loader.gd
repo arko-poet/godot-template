@@ -41,3 +41,7 @@ func load_from_path(scene_path: String) -> void:
 	_loading_scene_path = scene_path
 	ResourceLoader.load_threaded_request(scene_path)
 	set_process(true)
+
+
+func restart() -> void:
+	get_tree().reload_current_scene()

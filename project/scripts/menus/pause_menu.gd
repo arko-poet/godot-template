@@ -57,3 +57,7 @@ func _on_exit_button_pressed() -> void:
 func _on_exit_confirmed(accepted: bool) -> void:
 	if accepted:
 		get_tree().quit()
+
+
+func _on_restart_button_pressed() -> void:
+	SceneLoader.restart()
