@@ -25,6 +25,7 @@ buses/default_bus_layout="res://resources/default_bus_layout.tres"
 UiController="*uid://b0fggkygj08yj"
 Settings="*uid://ds7oicts8ev4p"
 SceneLoader="*uid://dqjnmmwf8fpu1"
+SfxController="*uid://6c8wnqkd62uu"
 
 [display]
 
