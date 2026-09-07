@@ -1,8 +1,11 @@
 extends Node
 
-@export_file("*.tscn") var game_scene_path: String
 @export var options_menu_scene: PackedScene
 @export var credits_scene: PackedScene
+
+@export var background_music: AudioStream
+
+@export_file("*.tscn") var game_scene_path: String
 
 @onready var title_label: Label = %TitleLabel
 @onready var version_label: Label = %VersionLabel
@@ -15,8 +18,10 @@ extends Node
 func _ready() -> void:
 	title_label.text = ProjectSettings.get_setting("application/config/name")
 	version_label.text = ProjectSettings.get_setting("application/config/version")
-	
+
 	_focus()
+
+	MusicController.play(background_music)
 
 
 func _on_options_button_pressed() -> void:

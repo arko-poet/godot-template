@@ -1,5 +1,7 @@
 extends Node
 
+@export var background_music: AudioStream
+
 var elapsed_time := 0.0:
 	set(value):
 		elapsed_time = value
@@ -12,6 +14,10 @@ var count := 0:
 
 @onready var elapsed_time_label: Label = %ElapsedTimeLabel
 @onready var counter_label: Label = %CounterLabel
+
+
+func _ready() -> void:
+	MusicController.play(background_music)
 
 
 func _process(delta: float) -> void:

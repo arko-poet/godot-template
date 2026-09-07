@@ -7,14 +7,10 @@
 
 [node name="MainMenu" type="Node" unique_id=939735052]
 script = ExtResource("1_ovrgc")
-game_scene_path = "uid://d1ujue4jtg46f"
 options_menu_scene = ExtResource("2_2o76q")
 credits_scene = ExtResource("3_2o76q")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=285645883]
-stream = ExtResource("5_imvie")
-autoplay = true
-bus = &"Music"
+background_music = ExtResource("5_imvie")
+game_scene_path = "uid://d1ujue4jtg46f"
 
 [node name="UI" type="Control" parent="." unique_id=459206347]
 layout_mode = 3

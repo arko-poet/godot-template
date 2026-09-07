@@ -1,7 +1,7 @@
 The purpose of this project is to develop a project template that can be used to start making a new Godot game. The tempalte will be tailored towards 2D signle player web based games. It will not be an addon based template.
 
 Features of the template:
-- [ ] project settings setup with instructions on how to change them depending of type of game to make
+- [x] project settings setup with instructions on how to change them depending of type of game to make
 - [x] automatic web deployments to the web
 - [ ] Controller for music
 - [ ] Controller for sound effects
@@ -9,7 +9,7 @@ Features of the template:
 - [ ] winning and loosing level/game
 - [ ] main menu
 	- [x] start game
-	- [ ] options
+	- [x] options
 		- [x] enable/disable different option tabs
 		- [x] key binds tab
 		- [x] restarting game/level
@@ -20,8 +20,8 @@ Features of the template:
 		- [ ] accessibility settings
 			- [ ] text, ui scale and font size options
 			- [ ] colorblind modes?
-		- [ ] custom settings
-		- [ ] video options
+		- [x] custom settings
+		- [x] video options
 			- [x] full screen toggle
 			- [x] multiple resolutions
 	- [x] credits panel
@@ -32,7 +32,7 @@ Features of the template:
 - [x] ability to navigate menus with other devices than mouse
 - [x] a collection of useful addons
 	- [x] gdscript formatter
-- [ ] pre configured export presets
+- [x] pre configured export presets
 - [x] version number label
 - [x] game title in menu
 - [ ] support for saving the game
