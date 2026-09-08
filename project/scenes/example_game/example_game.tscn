@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://crovuo8whtepl" path="res://scripts/example_game/example_game.gd" id="1_s4vru"]
 [ext_resource type="AudioStream" uid="uid://c4vbqo4n6m3k7" path="res://audio/music/template/Classicals.de - Chopin - Nocturne B. 49 in C-sharp minor 'Lento con gran espressione'.mp3" id="2_jrcqa"]
+[ext_resource type="AudioStream" uid="uid://cyyoajhg1hf4k" path="res://audio/sfx/kenney_ui-audio/Audio/kenney_digital-audio/Audio/pepSound1.ogg" id="3_ekce3"]
 [ext_resource type="PackedScene" uid="uid://brt4e2uh753mt" path="res://scenes/menus/pause_menu.tscn" id="3_wr22y"]
 
 [node name="ExampleGame" type="Node" unique_id=1441384683]
 script = ExtResource("1_s4vru")
 background_music = ExtResource("2_jrcqa")
+score_sound = ExtResource("3_ekce3")
 
 [node name="PauseMenu" parent="." unique_id=2005489429 instance=ExtResource("3_wr22y")]
 
