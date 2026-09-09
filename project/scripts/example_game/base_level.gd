@@ -1,5 +1,7 @@
 extends Node
 
+const TIME_LIMIT := 10.0
+
 @export var background_music: AudioStream
 @export var score_sound: AudioStream
 @export var required_count := 10
@@ -7,7 +9,10 @@ extends Node
 var elapsed_time := 0.0:
 	set(value):
 		elapsed_time = value
-		elapsed_time_label.text = "%.1fs" % elapsed_time
+		elapsed_time_label.text = "%.1fs/%ss" % [elapsed_time, TIME_LIMIT]
+		if elapsed_time >= TIME_LIMIT:
+			set_process(false)
+			GameController.lose_game()
 
 var count := 0:
 	set(value):
