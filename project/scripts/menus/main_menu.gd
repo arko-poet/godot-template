@@ -37,7 +37,8 @@ func _on_credits_button_pressed() -> void:
 
 
 func _on_start_game_button_pressed() -> void:
-	SceneLoader.load_from_path(game_scene_path)
+	GameController.load_first_level()
+	#SceneLoader.load_from_path(game_scene_path)
 
 
 func _focus() -> void:

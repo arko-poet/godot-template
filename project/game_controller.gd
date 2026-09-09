@@ -19,7 +19,10 @@ func lose_game() -> void:
 
 func next_level() -> void:
 	_current_level += 1
-	SceneLoader.load_from_path(_levels[_current_level])
+	if _current_level < _levels.size():
+		SceneLoader.load_from_path(_levels[_current_level])
+	else:
+		win_game()
 
 
 func restart_level() -> void:

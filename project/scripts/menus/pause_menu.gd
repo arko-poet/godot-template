@@ -8,7 +8,8 @@ const ConfirmationPanelScene := preload("res://scenes/ui_components/confirmation
 
 
 func _ready() -> void:
-	toggle_pause()
+	if visible:
+		toggle_pause()
 
 
 func _input(event: InputEvent) -> void:

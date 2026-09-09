@@ -2,6 +2,7 @@ extends Node
 
 @export var background_music: AudioStream
 @export var score_sound: AudioStream
+@export var required_count := 10
 
 var elapsed_time := 0.0:
 	set(value):
@@ -11,8 +12,10 @@ var elapsed_time := 0.0:
 var count := 0:
 	set(value):
 		count = value
-		counter_label.text = str(count)
+		counter_label.text = "%s/%s" % [count, required_count]
 		SfxController.play(score_sound, 0.1)
+		if count >= required_count:
+			GameController.next_level()
 
 @onready var elapsed_time_label: Label = %ElapsedTimeLabel
 @onready var counter_label: Label = %CounterLabel
