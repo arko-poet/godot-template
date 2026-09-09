@@ -3,8 +3,8 @@ The purpose of this project is to develop a project template that can be used to
 Features of the template:
 - [x] project settings setup with instructions on how to change them depending of type of game to make
 - [x] automatic web deployments to the web
-- [ ] Controller for music
-- [ ] Controller for sound effects
+- [x] Controller for music
+- [x] Controller for sound effects
 - [x] Controller for scene transitions, 
 - [ ] winning and loosing level/game
 - [ ] main menu
