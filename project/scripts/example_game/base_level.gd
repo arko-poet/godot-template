@@ -13,7 +13,7 @@ var elapsed_time := 0.0:
 		if elapsed_time >= TIME_LIMIT:
 			set_process(false)
 			GameController.lose_game()
-
+			
 var count := 0:
 	set(value):
 		count = value

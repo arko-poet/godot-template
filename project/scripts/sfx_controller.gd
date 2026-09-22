@@ -18,6 +18,6 @@ func play(audio_stream: AudioStream, pitch_variation: float = 0.0) -> void:
 	for player in _audio_stream_player_pool:
 		if not player.playing:
 			player.stream = audio_stream
-			player.pitch_scale += randf_range(-pitch_variation, pitch_variation)
+			player.pitch_scale = 1.0 + randf_range(-pitch_variation, pitch_variation)
 			player.play()
 			break
