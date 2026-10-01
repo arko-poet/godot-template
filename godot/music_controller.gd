@@ -10,3 +10,11 @@ func play(audio_stream: AudioStream) -> void:
 
 func stop() -> void:
 	audio_stream_player.stop()
+
+
+func pause() -> void:
+	audio_stream_player.stream_paused = true
+	
+
+func resume() -> void:
+	audio_stream_player.stream_paused = false
