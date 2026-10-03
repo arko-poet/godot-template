@@ -90,12 +90,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project Goals.md",
+                "file": "31-08-2026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project Goals"
+              "title": "31-08-2026"
             }
           }
         ]
@@ -267,17 +267,17 @@
   },
   "active": "255679dcca5bc41e",
   "lastOpenFiles": [
+    "27-08-2026.md",
+    "25-08-2026.md",
+    "Project Goals.md",
     "02-09-2026.md",
     "04-09-2026.md",
     "05-09-2026.md",
     "07-09-2026.md",
     "09-09-2026.md",
     "01-09-2026.md",
-    "27-08-2026.md",
     "31-08-2026.md",
-    "Project Goals.md",
     "Godot Template.md",
-    "25-08-2026.md",
     "Untitled 1.md"
   ]
 }
