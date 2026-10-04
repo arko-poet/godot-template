@@ -2,7 +2,7 @@ extends Node
 
 signal closed
 
-const InputMapListenerScene := preload("res://input_map_listener.tscn")
+const InputMapperScene := preload("res://input_mapper.tscn")
 
 @export var resolutions: Array[Vector2i]
 
@@ -71,7 +71,7 @@ func _populate_input_map() -> void:
 
 
 func _on_input_map_button_pressed(action: StringName, button: Button) -> void:
-	var input_map_listener: InputMapListener = InputMapListenerScene.instantiate()
+	var input_map_listener: InputMapper = InputMapperScene.instantiate()
 	input_map_listener.key_selected.connect(
 		_on_input_map_listener_key_selected.bind(action, button)
 	)
