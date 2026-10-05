@@ -5,7 +5,7 @@
 
 [node name="OptionsMenu" type="CanvasLayer" unique_id=1244393214]
 script = ExtResource("1_5l26w")
-resolutions = Array[Vector2i]([Vector2i(320, 180), Vector2i(640, 360), Vector2i(960, 540), Vector2i(1280, 720), Vector2i(1600, 900), Vector2i(1920, 1080)])
+resolutions = Array[Vector2i]([Vector2i(640, 360), Vector2i(1280, 720), Vector2i(1920, 1080)])
 
 [node name="UI" type="Control" parent="." unique_id=1513808327]
 layout_mode = 3
