@@ -32,6 +32,15 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.6039216, 0.6039216, 0.6039216, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bivr"]
+bg_color = Color(0.27450982, 0.27450982, 0.27450982, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+
 [resource]
 Button/colors/font_color = Color(0.92941177, 0.92941177, 0.92941177, 1)
 Button/colors/font_disabled_color = Color(0.43137255, 0.43137255, 0.43137255, 1)
@@ -43,3 +52,4 @@ Button/styles/focus = SubResource("StyleBoxFlat_0k5xl")
 Button/styles/hover = SubResource("StyleBoxFlat_0k5xl")
 Button/styles/normal = SubResource("StyleBoxFlat_klsd2")
 Button/styles/pressed = SubResource("StyleBoxFlat_1ymaj")
+TabBar/styles/tab_focus = SubResource("StyleBoxFlat_6bivr")
