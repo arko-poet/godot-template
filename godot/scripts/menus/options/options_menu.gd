@@ -66,6 +66,7 @@ func _populate_input_map() -> void:
 			var button := Button.new()
 			button.text = InputMap.get_action_description(action)
 			button.pressed.connect(_on_input_map_button_pressed.bind(action, button))
+			button.custom_minimum_size = Vector2(128, 0)
 			input_settings.add_child(label)
 			input_settings.add_child(button)
 

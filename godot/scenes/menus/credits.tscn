@@ -56,16 +56,20 @@ text = "[center]
 [hr]
 
 [font_size=64]Thank you for playing![/font_size]
-[/center]"
+[/center]
+
+
+
+"
 
 [node name="ExitCreditsButton" type="Button" parent="UI" unique_id=249258513]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 2
+anchors_preset = -1
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -31.0
-offset_right = 62.0
+offset_left = 8.0
+offset_bottom = -8.0
 grow_vertical = 0
 text = "Return"
 
