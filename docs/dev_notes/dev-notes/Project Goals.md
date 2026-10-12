@@ -6,8 +6,8 @@ Features of the template:
 - [x] Controller for music
 - [x] Controller for sound effects
 - [x] Controller for scene transitions, 
-- [ ] winning and loosing level/game
-- [ ] main menu
+- [x] winning and loosing level/game
+- [x] main menu
 	- [x] start game
 	- [x] options
 		- [x] enable/disable different option tabs
@@ -17,9 +17,9 @@ Features of the template:
 			- [x] mute toggle
 			- [x] audio buses
 			- [x] option for adding multiple sliders (default master, music, sfx and ambience)
-		- [ ] accessibility settings
-			- [ ] text, ui scale and font size options
-			- [ ] colorblind modes?
+		- [x] accessibility settings
+			- [x] text, ui scale and font size options
+			- [x] colorblind modes?
 		- [x] custom settings
 		- [x] video options
 			- [x] full screen toggle
@@ -27,7 +27,7 @@ Features of the template:
 	- [x] credits panel
 - [x] Pause Menu
 - [x] setup directory convention
-- [ ] create instruction of how to consume the template
+- [x] create instruction of how to consume the template
 - [x] persistent options
 - [x] ability to navigate menus with other devices than mouse
 - [x] a collection of useful addons
@@ -35,10 +35,10 @@ Features of the template:
 - [x] pre configured export presets
 - [x] version number label
 - [x] game title in menu
-- [ ] support for saving the game
-- [ ] language/localization selector
+- [x] support for saving the game
+- [x] language/localization selector
 - [x] loading screens for async scene loading
 - [x] sfx/music/icon placeholders
-- [ ] guidance and setup for optimising for the web
+- [x] guidance and setup for optimising for the web
 - [x] loading screen bar when game starts
-- [ ] add theme
+- [x] add theme
