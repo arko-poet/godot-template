@@ -2,7 +2,7 @@ extends Node
 
 signal closed
 
-const InputMapperScene := preload("res://input_mapper.tscn")
+const InputMapperScene := preload("res://scenes/ui_components/input_mapper.tscn")
 
 @export var resolutions: Array[Vector2i]
 
