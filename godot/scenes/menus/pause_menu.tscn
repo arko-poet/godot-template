@@ -9,6 +9,7 @@ script = ExtResource("1_fwndu")
 options_menu_scene = ExtResource("2_7unhi")
 
 [node name="UI" type="Control" parent="." unique_id=1466767445]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
